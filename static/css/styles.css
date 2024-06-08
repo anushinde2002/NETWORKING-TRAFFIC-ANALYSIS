@@ -1,0 +1,59 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 190px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1A1A1D;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #66FCF1;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #ffe302;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 16px;
+    }
+}
+
+.fa {
+    color: #FF5A36;
+}
+
+.main {
+    background-color: #FEFFFF;
+    height: 100vh;
+    width: 80vw;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
