@@ -1,0 +1,72 @@
+python: https://www.python.org/downloads/
+mysql : https://dev.mysql.com/downloads/mysql/
+mysql workbench : https://www.mysql.com/products/workbench/
+-----------------------------------------------------------------------------------------------------------------------------------
+                    ================================== Flask Application Sturcture ==================================
+-----------------------------------------------------------------------------------------------------------------------------------
+\-- root-folder
+    \--nasmas                       => Project Envirement.
+	\-- Lib
+        \-- Scripts
+        |-- .gitignore
+        |-- pyvenv.cfg
+    \-- static
+        \--css
+        \-- img
+        \-- js
+        |-- style.css
+    \-- templates
+        |-- 404.html
+        |-- 500.html
+        |-- home.html
+        |-- index.html
+        |-- layout.html
+        |-- profile.html
+        |-- register.html
+    |-- app.py
+    |-- document.txt
+    |-- login-registartion.sql
+-----------------------------------------------------------------------------------------------------------------------------------
+                    ================================== Run Flask Application ==================================
+-----------------------------------------------------------------------------------------------------------------------------------
+root-path>
+root-path> cd nasmas
+root-path\nasmas>
+root-path\nasmas> cd Scripts
+root-path\nasmas\Scripts> activate.ps1 
+(nasmas) root-path\nasmas\Scripts>cd ..
+(nasmas) root-path\nasmas>cd ..
+(nasmas) root-path\>set FLASK_APP=app.py
+(nasmas) root-path\>set FLASK_ENV=development
+(nasmas) root-path\>Flask run                                         => Normal Run
+(nasmas) root-path\>Flask run --host 192.168.1.12 --port 5000         => Run using perticular Host and Port
+-----------------------------------------------------------------------------------------------------------------------------------
+#Install virtualenv
+=> pip install virtualenv
+
+#create virtualenv env-name
+=> virtualenv nasmas
+
+root-path>
+root-path> cd nasmas
+root-path\nasmas>
+root-path\nasmas> cd Scripts
+root-path\nasmas\Scripts> activate.ps1 
+(nasmas) root-path\nasmas\Scripts>cd ..
+(nasmas) root-path\nasmas>cd ..
+(nasmas) root-path>
+(nasmas) root-path> pip install flask
+(nasmas) root-path> pip install flask_mysqldb 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+                              ================================== Basic Liberies ==================================
+-----------------------------------------------------------------------------------------------------------------------------------
+=> pip install flask
+=> pip install flask-mysqldb
+=> pip install flask-bootstrap
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+pip freeze > requirements.txt
+        
+pip install -r requirements.txt
