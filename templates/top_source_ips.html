@@ -1,0 +1,22 @@
+{% extends 'layout.html' %} {% block title %}Home{% endblock %} {% block content %}
+<h2>Top Source IP's-Connection,Bytes and Durations</h2>
+<div class="container-fluid mt-3">
+  
+ <div class="row">
+       <div class="col-12">
+        <iframe src="{{ url_for('sip_bytes') }}" style="height:500px;width:100%;" title="sip_bytes"></iframe>
+       </div>
+       <br>
+      <div class="col-12">
+        <iframe src="{{ url_for('sip_connections') }}"  style="height:500px;width:100%;" title="sip_connections"></iframe>
+      </div>
+      <br>
+
+      <div class="col-12">
+        <iframe src="{{ url_for('sip_durations') }}"  style="height:500px;width:100%;" title="sip_durations"></iframe>
+      </div>
+   </div>
+</div>
+
+
+{% endblock %}

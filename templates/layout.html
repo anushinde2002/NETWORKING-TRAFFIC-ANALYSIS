@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='calendar.min.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="loggedin">
+    <nav class="navtop">
+        <div>
+            <h1>App </h1>
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+            
+             <a href="#" class="btn dropdown-toggle"  data-toggle="dropdown"> <i class="fas fa-chart-pie"></i> Report</a>
+            
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item py-2" href="{{ url_for('key_network_events') }}">Top Events for 24 hr</a></li>
+                  <li><a class="dropdown-item py-2" href="{{ url_for('traffic') }}">Average Traffic</a></li>
+                  <li><a class="dropdown-item py-2" href="{{ url_for('top_sips') }}">Top Source IP's</a></li>
+                  <li><a class="dropdown-item py-2" href="{{ url_for('top_dips') }}">Top Destination IP's</a></li>
+              </ul>
+            
+            <a href="{{ url_for('profile') }}"><i class="profile-image"></i>{{ username }}</a>
+            <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </div>
+    </nav>
+    <!-- <nav class="navside">
+			<div>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Dashboard</a>
+				<a href="{{ url_for('profile') }}"><i class="fas fa-user-sitemap"></i>Traffic</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-map-signs"></i>IP</a>
+			</div>
+		</nav> -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
